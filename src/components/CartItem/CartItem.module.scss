@@ -1,0 +1,185 @@
+@import '../../scss/variables';
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr auto 32px;
+  width: 100%;
+  border-top: 1px solid $gray-line;
+  padding-top: 30px;
+  margin-top: 30px;
+  gap: 30px;
+  align-items: center;
+
+  @media (max-width: 660px) {
+    gap: 10px;
+  }
+
+  .one {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @media (max-width: 660px) {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  .two {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @media (max-width: 660px) {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  .img {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 27px;
+      letter-spacing: 0.01em;
+    }
+
+    p {
+      font-size: 18px;
+      color: #8d8d8d;
+    }
+  }
+
+  .count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    .minus {
+      svg {
+        path:first-of-type {
+          display: none;
+        }
+      }
+    }
+
+    b {
+      font-size: 22px;
+    }
+  }
+
+  .price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    b {
+      font-weight: bold;
+      font-size: 22px;
+      letter-spacing: 0.01em;
+    }
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    padding: 0;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color $duration ease-in-out, border-color $duration ease-in-out;
+    border: 2px solid $orange;
+    background-color: #fff;
+    &,
+    span {
+      color: $orange;
+    }
+
+    svg {
+      path {
+        fill: $orange;
+      }
+    }
+
+    i,
+    span,
+    path,
+    svg {
+      transition: all $duration ease-in-out;
+    }
+
+    &:hover {
+      background-color: $orange;
+
+      &,
+      span {
+        color: #fff;
+      }
+
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+
+    .minus {
+      svg {
+        path:first-of-type {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .remove {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @media (max-width: 660px) {
+      align-self: start;
+    }
+
+    .button {
+      border-color: darken($color: $gray-line, $amount: 10);
+    }
+
+    svg {
+      transform: rotate(45deg);
+
+      path {
+        fill: darken($color: $gray-line, $amount: 15);
+      }
+    }
+
+    .button {
+      svg {
+        width: 11.5px;
+        height: 11.5px;
+        position: relative;
+      }
+      &:hover,
+      &:active {
+        border-color: darken($color: $gray-line, $amount: 80);
+        background-color: darken($color: $gray-line, $amount: 80);
+      }
+    }
+  }
+}

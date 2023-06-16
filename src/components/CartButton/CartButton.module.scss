@@ -1,0 +1,55 @@
+@import '../../scss/variables';
+
+.button {
+  position: fixed;
+  right: 5%;
+  bottom: 10%;
+  background-color: $orange;
+  border-radius: 30px;
+  min-width: 100px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color $duration ease-in-out, border-color $duration ease-in-out;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  line-height: 23px;
+  padding: 12px 25px;
+  box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.5);
+  @media (max-width: 767px) {
+    right: 10px;
+    bottom: 10px;
+  }
+  &,
+  span {
+    color: #fff;
+  }
+
+  i,
+  span,
+  path,
+  svg {
+    transition: all $duration ease-in-out;
+  }
+
+  &:hover {
+    background-color: darken($orange, 8%);
+  }
+  svg {
+    margin-right: 8px;
+    margin-bottom: 1px;
+  }
+
+  span {
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+
+.delimiter {
+  width: 1px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.25);
+  margin-left: 14px;
+  margin-right: 14px;
+}

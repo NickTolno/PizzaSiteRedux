@@ -1,0 +1,1 @@
+.top{display:flex;align-items:center;justify-content:space-between;gap:20px}@media(max-width: 1300px){.top{flex-direction:column}}.title{margin:35px 0}

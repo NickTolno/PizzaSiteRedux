@@ -1,0 +1,33 @@
+@import '../../scss/variables';
+
+.categories {
+  width: 100%;
+  ul {
+    display: flex;
+    gap: 10px;
+    @media (max-width: 950px) {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+    li {
+      background-color: #f9f9f9;
+      padding: 13px 30px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.1s ease-in-out;
+      &:hover {
+        background-color: darken(#f9f9f9, 2%);
+      }
+
+      &.active {
+        background-color: #282828;
+        color: #fff;
+      }
+      @media (max-width: 550px) {
+        font-size: 12px;
+        padding: 5px 10px;
+      }
+    }
+  }
+}

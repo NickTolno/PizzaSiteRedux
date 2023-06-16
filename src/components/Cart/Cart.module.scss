@@ -1,0 +1,191 @@
+@import '../../scss/variables';
+
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  @media (max-width: 520px) {
+    flex-direction: column;
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  svg {
+    position: relative;
+    top: -2px;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    path {
+      stroke: #232323;
+      stroke-width: 1.9;
+    }
+  }
+}
+
+.clear {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  span {
+    display: inline-block;
+    margin-left: 7px;
+    color: #b6b6b6;
+    font-size: 18px;
+  }
+
+  span,
+  svg,
+  path {
+    transition: all $duration ease-in-out;
+  }
+
+  &:hover {
+    svg {
+      path {
+        stroke: darken($color: #b6b6b6, $amount: 50);
+      }
+    }
+    span {
+      color: darken($color: #b6b6b6, $amount: 50);
+    }
+  }
+}
+
+.bottom {
+  margin: 50px 0;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  @media (max-width: 520px) {
+    flex-direction: column;
+  }
+
+  span {
+    font-size: 22px;
+
+    &:last-of-type {
+      b {
+        color: $orange;
+      }
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  align-items: center;
+  gap: 10px;
+  @media (max-width: 520px) {
+    flex-direction: column;
+  }
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 210px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #111;
+      border-color: #111;
+      span {
+        color: #f6f6f6;
+      }
+    }
+  }
+  svg {
+    margin-right: 12px;
+  }
+  span {
+    font-size: 16px;
+    color: #c3c3c3;
+    font-weight: 600;
+  }
+}
+
+.payBtn {
+  font-size: 16px;
+  font-weight: 600;
+  width: 210px;
+  padding: 16px;
+  display: inline-block;
+  border-radius: 30px;
+  background-color: #fe5f1e;
+  min-width: 100px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+  border: 1px solid transparent;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #f24701;
+    }
+  }
+  span {
+    color: #fff;
+  }
+}
+
+.emptyCart {
+  margin: 0 auto;
+  max-width: 560px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  h2 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 145.4%;
+    letter-spacing: 0.01em;
+    color: #777777;
+  }
+
+  icon {
+    position: relative;
+    top: 2px;
+  }
+
+  .image {
+    max-width: 100%;
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  a {
+    margin: 0 auto;
+  }
+}

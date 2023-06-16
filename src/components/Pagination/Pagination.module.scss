@@ -1,0 +1,35 @@
+.root {
+  display: flex;
+  gap: 20px;
+  li {
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: all 0.3s ease 0s;
+    &.active {
+      border: 1px solid #000;
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: transparent;
+          cursor: default;
+        }
+      }
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  }
+}
+
+.prev,
+.next {
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+}
